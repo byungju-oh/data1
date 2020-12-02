@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <nav>
+        <ul> 
+           <li><a href="index.html">범죄</a>
+           </li> <li><a href="1.html">cctv</a></li>
+           </li> <li><a href="2.html">확인</a>
+          
+            
+     
+       
+           
+       </ul> 
+   </nav>
+    <meta charset="utf-8" />
+    <title>Draw GeoJSON points</title>
+    
+
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        position: relative;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='map' style='width: 600px; height: 600px;'></div>
+    
+    <script>
+      mapboxgl.accessToken =
+        "pk.eyJ1IjoiZmZyd3ciLCJhIjoiY2tpNjF5cHd2MDZnZDJxbzl4ZTF3bWp1YSJ9.vRyMZpJ7RccFiQ-hAaJvFg";
+      var map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/ffrww/cki7h44fu84mr1ao1m7xe6enw",
+        center: [126.974139, 37.565002],
+        zoom: 10,
+      });
+
+     
+    </script>
+  </body>
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <nav>
+        <ul> 
+           <li><a href="index.html">범죄</a>
+           </li> <li><a href="1.html">cctv</a></li>
+           </li> <li><a href="2.html">확인</a>
+          
+            
+     
+       
+           
+       </ul> 
+   </nav>
+    <meta charset="utf-8" />
+    <title>Draw GeoJSON points</title>
+    
+
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        position: relative;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='map' style='width: 600px; height: 600px;'></div>
+    
+    <script>
+      mapboxgl.accessToken =
+        "pk.eyJ1IjoiZmZyd3ciLCJhIjoiY2tpNjF5cHd2MDZnZDJxbzl4ZTF3bWp1YSJ9.vRyMZpJ7RccFiQ-hAaJvFg";
+      var map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/ffrww/cki7capdf7zk219qktyxu3ylk",
+        center: [126.974139, 37.565002],
+        zoom: 10,
+      });
+
+      map.on("load", function () {
+        // Add an image to use as a custom marker
+        map.loadImage("./d.png", function (error, image) {
+          if (error) throw error;
+          map.addImage("custom-marker", image);
+          // Add a GeoJSON source with 2 points
+          map.addSource("points", {
+            type: "geojson",
+            data: {
+              type: "FeatureCollection",
+              features: [
+                {
+                  type: "Feature",
+                  geometry: {
+                    type: "Point",
+                    coordinates: [127.062561, 37.497205],
+                  },
+                  properties: {
+                    name: "강남구",
+                    cctv: 5221,
+                    po: 14409,
+                    crime: 7304,
+                  },
+                },
+
+                {
+                  type: "Feature",
+                  geometry: {
+                    type: "Point",
+                    coordinates: [127.14812, 37.550646],
+                  },
+                  properties: {
+                    name: "강동구",
+                    cctv: 1879,
+                    po: 13583,
+                    crime: 4014,
+                  },
+                },
+
+                {
+                  type: "Feature",
+                  geometry: {
+                    type: "Point",
+                    coordinates: [127.01372, 37.642881],
+                  },
+                  properties: {
+                    name: "강북구",
+                    cctv: 1265,
+                    po: 12696,
+                    crime: 3838,
+                  },
+                },
+                {
+                  type: "Feature",
+                  geometry: {
+                    type: "Point",
+                    coordinates: [126.82505, 37.559981],
+                  },
+                  properties: {
+                    name: "강서구",
+                    cctv: 1617,
+                    po: 13897,
+                    crime: 4924,
+                  },
+                },
+                {
+                  type: "Feature",
+                  geometry: {
+                    type: "Point",
+                    coordinates: [126.943624, 37.468346],
+                  },
+                  properties: {
+                    name: "관악구",
+                    cctv: 3985,
+                    po: 13984,
+                    crime: 5328,
+                  },
+                },
+                {
+                  type: "Feature",
+                  geometry: {
+                    type: "Point",
+                    coordinates: [127.084817, 37.544437],
+                  },
+                  properties: {
+                    name: "광진구",
+                    cctv: 1581,
+                    po: 14243,
+                    crime: 4011,
+                  },
+                },
+
+                {
+                  type: "Feature",
+                  geometry: {
+                    type: "Point",
+                    coordinates: [126.860756, 37.49432],
+                  },
+                  properties: {
+                    name: "구로구",
+                    cctv: 3227,
+                    po: 14302,
+                    crime: 4704,
+                  },
+                },
+
+                {
+                  type: "Feature",
+                  geometry: {
+                    type: "Point",
+                    coordinates: [126.900727, 37.459642],
+                  },
+                  properties: {
+                    name: "금천구",
+                    cctv: 1634,
+                    po: 13252,
+                    crime: 3105,
+                  },
+                },
+
+                {
+                  type: "Feature",
+                  geometry: {
+                    type: "Point",
+                    coordinates: [127.074325, 37.651288],
+                  },
+                  properties: {
+                    name: "노원구",
+                    cctv: 1906,
+                    po: 14011,
+                    crime: 4153,
+                  },
+                },
+
+                {
+                  type: "Feature",
+                  geometry: {
+                    type: "Point",
+                    coordinates: [127.032032, 37.668182],
+                  },
+                  properties: {
+                    name: "도봉구",
+                    cctv: 858,
+                    po: 14094,
+                    crime: 2110,
+                  },
+                },
+
+                {
+                  type: "Feature",
+                  geometry: {
+                    type: "Point",
+                    coordinates: [127.055388, 37.581192],
+                  },
+                  properties: {
+                    name: "동대문구",
+                    cctv: 2003,
+                    po: 13101,
+                    crime: 3692,
+                  },
+                },
+                {
+                  type: "Feature",
+                  geometry: {
+                    type: "Point",
+                    coordinates: [126.952546, 37.500016],
+                  },
+                  properties: {
+                    name: "동작구",
+                    cctv: 1780,
+                    po: 15489,
+                    crime: 3400,
+                  },
+                },
+
+                {
+                  type: "Feature",
+                  geometry: {
+                    type: "Point",
+                    coordinates: [126.908135, 37.559319],
+                  },
+                  properties: {
+                    name: "마포구",
+                    cctv: 1935,
+                    po: 15274,
+                    crime: 4842,
+                  },
+                },
+
+                {
+                  type: "Feature",
+                  geometry: {
+                    type: "Point",
+                    coordinates: [126.936526, 37.578397],
+                  },
+                  properties: {
+                    name: "서대문구",
+                    cctv: 2121,
+                    po: 14569,
+                    crime: 2943,
+                  },
+                },
+
+                {
+                  type: "Feature",
+                  geometry: {
+                    type: "Point",
+                    coordinates: [127.031975, 37.473667],
+                  },
+                  properties: {
+                    name: "서초구",
+                    cctv: 2835,
+                    po: 14778,
+                    crime: 5542,
+                  },
+                },
+
+                {
+                  type: "Feature",
+                  geometry: {
+                    type: "Point",
+                    coordinates: [127.039198, 37.552725],
+                  },
+                  properties: {
+                    name: "성동구",
+                    cctv: 2679,
+                    po: 13667,
+                    crime: 2512,
+                  },
+                },
+                {
+                  type: "Feature",
+                  geometry: {
+                    type: "Point",
+                    coordinates: [127.018557, 37.60591],
+                  },
+                  properties: {
+                    name: "성북구",
+                    cctv: 3003,
+                    po: 12385,
+                    crime: 2877,
+                  },
+                },
+                {
+                  type: "Feature",
+                  geometry: {
+                    type: "Point",
+                    coordinates: [127.113918, 37.505034],
+                  },
+                  properties: {
+                    name: "송파구",
+                    cctv: 1586,
+                    po: 14998,
+                    crime: 5698,
+                  },
+                },
+
+                {
+                  type: "Feature",
+                  geometry: {
+                    type: "Point",
+                    coordinates: [126.857211, 37.52564],
+                  },
+                  properties: {
+                    name: "양천구",
+                    cctv: 2775,
+                    po: 15132,
+                    crime: 3214,
+                  },
+                },
+                {
+                  type: "Feature",
+                  geometry: {
+                    type: "Point",
+                    coordinates: [126.910481, 37.521992],
+                  },
+                  properties: {
+                    name: "영등포구",
+                    cctv: 2495,
+                    po: 15368,
+                    crime: 5820,
+                  },
+                },
+
+                {
+                  type: "Feature",
+                  geometry: {
+                    type: "Point",
+                    coordinates: [126.980332, 37.535379],
+                  },
+                  properties: {
+                    name: "용산구",
+                    cctv: 2063,
+                    po: 12688,
+                    crime: 3313,
+                  },
+                },
+
+                {
+                  type: "Feature",
+                  geometry: {
+                    type: "Point",
+                    coordinates: [126.927538, 37.619149],
+                  },
+                  properties: {
+                    name: "은평구",
+                    cctv: 2962,
+                    po: 12933,
+                    crime: 3880,
+                  },
+                },
+
+                {
+                  type: "Feature",
+                  geometry: {
+                    type: "Point",
+                    coordinates: [126.977044, 37.594494],
+                  },
+                  properties: {
+                    name: "종로구",
+                    cctv: 1471,
+                    po: 9342,
+                    crime: 3846,
+                  },
+                },
+
+                {
+                  type: "Feature",
+                  geometry: {
+                    type: "Point",
+                    coordinates: [126.995724, 37.559873],
+                  },
+                  properties: {
+                    name: "중구",
+                    cctv: 1544,
+                    po: 15431,
+                    crime: 4327,
+                  },
+                },
+
+                {
+                  type: "Feature",
+                  geometry: {
+                    type: "Point",
+                    coordinates: [127.090985, 37.596915],
+                  },
+                  properties: {
+                    name: "중량구",
+                    cctv: 1068,
+                    po: 13601,
+                    crime: 4268,
+                  },
+                },
+              ],
+            },
+          });
+
+          // Add a symbol layer
+          map.addLayer({
+            id: "points",
+            type: "symbol",
+            source: "points",
+            layout: {
+              "icon-image": "custom-marker",
+              // get the title name from the source's "title" property
+              "text-field": ["get", "crime"],
+              "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+              "text-offset": [0, 1.25],
+              "text-anchor": "top",
+            },
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
