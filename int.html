@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <nav>
+        <ul> 
+           <li><a href="index.html">범죄</a>
+           </li> <li><a href="1.html">cctv</a></li>
+           </li> <li><a href="2.html">확인</a>
+          
+            
+     
+       
+           
+       </ul> 
+   </nav>
+    <meta charset="utf-8" />
+    <title>Draw GeoJSON points</title>
+    
+
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        position: relative;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='map' style='width: 600px; height: 600px;'></div>
+    
+    <script>
+      mapboxgl.accessToken =
+        "pk.eyJ1IjoiZmZyd3ciLCJhIjoiY2tpNjF5cHd2MDZnZDJxbzl4ZTF3bWp1YSJ9.vRyMZpJ7RccFiQ-hAaJvFg";
+      var map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/ffrww/cki7capdf7zk219qktyxu3ylk",
+        center: [126.974139, 37.565002],
+        zoom: 10,
+      });
+
+      map.on("load", function () {
+        // Add an image to use as a custom marker
+        map.loadImage("./d.png", function (error, image) {
+          if (error) throw error;
+          map.addImage("custom-marker", image);
+          // Add a GeoJSON source with 2 points
+          map.addSource("points", {
+            type: "geojson",
+            data: {
+              type: "FeatureCollection",
+              features: [
+                {
+                  type: "Feature",
+                  geometry: {
+                    type: "Point",
+                    coordinates: [127.062561, 37.497205],
+                  },
+                  properties: {
+                    name: "강남구",
+                    cctv: 5221,
+                    po: 14409,
+                    crime: 7304,
+                  },
+                },
+
+                {
+                  type: "Feature",
+                  geometry: {
+                    type: "Point",
+                    coordinates: [127.14812, 37.550646],
+                  },
+                  properties: {
+                    name: "강동구",
+                    cctv: 1879,
+                    po: 13583,
+                    crime: 4014,
+                  },
+                },
+
+              
+                
+
+               
+              ],
+            },
+          });
+
+          // Add a symbol layer
+          map.addLayer({
+            id: "points",
+            type: "symbol",
+            source: "points",
+            layout: {
+              "icon-image": "custom-marker",
+              // get the title name from the source's "title" property
+              "text-field": ["get", "crime"],
+              "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+              "text-offset": [0, 1.25],
+              "text-anchor": "top",
+            },
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

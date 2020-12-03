@@ -1,0 +1,247 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [127.062561, 37.497205] },
+      "properties": {
+        "name": "강남구",
+        "cctv": 5221,
+        "po": 14409
+      }
+    },
+
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [127.14812, 37.550646] },
+      "properties": {
+        "name": "강동구",
+        "cctv": 1879,
+        "po": 13583
+      }
+    },
+
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [127.01372, 37.642881] },
+      "properties": {
+        "name": "강북구",
+        "cctv": 1265,
+        "po": 12696
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [126.82505, 37.559981] },
+      "properties": {
+        "name": "강서구",
+        "cctv": 1617,
+        "po": 13897
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [126.943624, 37.468346] },
+      "properties": {
+        "name": "관악구",
+        "cctv": 3985,
+        "po": 13984
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [127.084817, 37.544437] },
+      "properties": {
+        "name": "광진구",
+        "cctv": 1581,
+        "po": 14243
+      }
+    },
+
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [126.860756, 37.49432] },
+      "properties": {
+        "name": "구로구",
+        "cctv": 3227,
+        "po": 14302
+      }
+    },
+
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [126.900727, 37.459642] },
+      "properties": {
+        "name": "금천구",
+        "cctv": 1634,
+        "po": 13252
+      }
+    },
+
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [127.074325, 37.651288] },
+      "properties": {
+        "name": "노원구",
+        "cctv": 1906,
+        "po": 14011
+      }
+    },
+
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [127.032032, 37.668182] },
+      "properties": {
+        "name": "도봉구",
+        "cctv": 858,
+        "po": 14094
+      }
+    },
+
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [127.055388, 37.581192] },
+      "properties": {
+        "name": "동대문구",
+        "cctv": 2003,
+        "po": 13101
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [126.952546, 37.500016] },
+      "properties": {
+        "name": "동작구",
+        "cctv": 1780,
+        "po": 15489
+      }
+    },
+
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [126.908135, 37.559319] },
+      "properties": {
+        "name": "마포구",
+        "cctv": 1935,
+        "po": 15274
+      }
+    },
+
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [126.936526, 37.578397] },
+      "properties": {
+        "name": "서대문구",
+        "cctv": 2121,
+        "po": 14569
+      }
+    },
+
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [127.031975, 37.473667] },
+      "properties": {
+        "name": "서초구",
+        "cctv": 2835,
+        "po": 14778
+      }
+    },
+
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [127.039198, 37.552725] },
+      "properties": {
+        "name": "성동구",
+        "cctv": 2679,
+        "po": 13667
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [127.018557, 37.60591] },
+      "properties": {
+        "name": "성북구",
+        "cctv": 3003,
+        "po": 12385
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [127.113918, 37.505034] },
+      "properties": {
+        "name": "송파구",
+        "cctv": 1586,
+        "po": 14998
+      }
+    },
+
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [126.857211, 37.52564] },
+      "properties": {
+        "name": "양천구",
+        "cctv": 2775,
+        "po": 15132
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [126.910481, 37.521992] },
+      "properties": {
+        "name": "영등포구",
+        "cctv": 2495,
+        "po": 15368
+      }
+    },
+
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [126.980332, 37.535379] },
+      "properties": {
+        "name": "용산구",
+        "cctv": 2063,
+        "po": 12688
+      }
+    },
+
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [126.927538, 37.619149] },
+      "properties": {
+        "name": "은평구",
+        "cctv": 2962,
+        "po": 12933
+      }
+    },
+
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [126.977044, 37.594494] },
+      "properties": {
+        "name": "종로구",
+        "cctv": 1471,
+        "po": 9342
+      }
+    },
+
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [126.995724, 37.559873] },
+      "properties": {
+        "name": "중구",
+        "cctv": 1544,
+        "po": 15431
+      }
+    },
+
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [127.090985, 37.596915] },
+      "properties": {
+        "name": "중량구",
+        "cctv": 1068,
+        "po": 13601
+      }
+    }
+  ]
+}
